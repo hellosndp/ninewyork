@@ -1,0 +1,278 @@
+Design a full-width, modern, service-based business website for a commercial cleaning company operating in New York City.
+
+This website should clearly communicate reliability, routine service, professionalism, and trust.
+It should feel like a company that provides regular, scheduled cleaning services to offices, buildings, and commercial spaces across NYC — not a one-time handyman service and not a tech startup.
+
+The goal of the website is lead collection, not browsing.
+
+Overall Look & Feel
+
+Bold, confident, operational
+
+Practical and service-oriented
+
+Feels established and dependable
+
+Designed for busy business owners and facility managers
+
+No startup, SaaS, or luxury branding cues
+
+Color System (Strict Rules)
+
+Use bright yellow as the primary and dominant background color across the entire website
+
+All main text must be solid black
+
+White or very light neutral colors may be used only for:
+
+Form background
+
+Cards
+
+Image overlays
+
+No gradients
+
+No muted tones
+
+No dark mode
+
+High contrast at all times
+
+Typography
+
+Use a strong, readable sans-serif font
+
+Bold headings
+
+Clean, easy-to-scan body text
+
+No decorative, playful, or handwritten fonts
+
+The typography should feel professional and industrial, not creative
+
+Hero Section (MOST IMPORTANT SECTION)
+Hero Layout
+
+Full-width hero section
+
+Bright yellow background
+
+Large commercial cleaning image showing:
+
+Office cleaning
+
+Janitorial staff in uniforms
+
+Commercial interiors
+
+NYC-style office or building environments
+
+Hero Headline
+
+Use a clear, direct headline such as:
+
+“Commercial Cleaning Services for New York Businesses”
+
+“Reliable Commercial Cleaning Across New York City”
+
+The headline must clearly answer:
+
+What service it is
+
+That it’s commercial
+
+That it’s in New York
+
+No clever wordplay. No marketing fluff.
+
+Hero Form (PRIMARY & ONLY CTA)
+
+Place a lead capture form directly inside the hero section, visible immediately without scrolling.
+
+The form must be part of the hero layout (not a popup)
+
+Position:
+
+On the right side of the hero on desktop
+
+Below the headline on mobile
+
+Hero Form Fields
+
+Include only practical, business-focused fields:
+
+Business Name
+
+Contact Name
+
+Email Address
+
+Phone Number
+
+Type of Space (Office, Retail, Building, Other)
+
+Optional message or cleaning requirements
+
+Form Design Rules
+
+Form background should be white or very light neutral
+
+All form text should be black
+
+Clean input fields with labels
+
+No icons
+
+No decorative elements
+
+Simple, trustworthy, functional appearance
+
+One clear submit button
+
+CTA RULE (VERY IMPORTANT)
+
+The hero form submit button is the ONLY call-to-action on the entire website
+
+Do NOT include:
+
+“Get a Quote”
+
+“Call Now”
+
+Phone numbers
+
+Secondary buttons
+
+Sticky CTAs
+
+Footer CTAs
+
+No competing actions anywhere else
+
+User flow should be:
+Land → Understand service → Fill form → Done
+
+Services Section
+
+Clearly list recurring commercial services in a clean grid layout:
+
+Office Cleaning
+
+Daily Janitorial Services
+
+Floor & Carpet Cleaning
+
+Restroom Sanitization
+
+Building & Lobby Cleaning
+
+After-Hours Commercial Cleaning
+
+Each service should have:
+
+Short, straightforward description
+
+Supporting image or simple visual cue
+
+Emphasis on ongoing, scheduled service, not one-time jobs
+
+Image Gallery (Carousel)
+
+Include a dedicated image gallery section displayed as a horizontal carousel.
+
+Carousel rules:
+
+Show multiple real-world commercial cleaning images
+
+Office spaces, buildings, staff at work
+
+NYC commercial environments
+
+Auto-scroll slowly
+
+Manual navigation controls (arrows or dots)
+
+Clean, distraction-free presentation
+
+This gallery should reinforce:
+
+Scale
+
+Consistency
+
+Real operations
+
+Trust
+
+Trust & Credibility Section
+
+Include a simple trust-building section that communicates:
+
+Serving businesses across New York City
+
+Experienced cleaning teams
+
+Reliable schedules
+
+Professional, insured service
+
+No testimonials required.
+No logos needed.
+Keep it operational, not salesy.
+
+Layout & Structure
+
+Clean grid-based layout
+
+Large, readable sections
+
+Easy vertical scrolling
+
+Mobile-first responsiveness
+
+No heavy animations
+
+No parallax
+
+No fancy interactions
+
+Footer
+
+Minimal and functional
+
+Company name
+
+“Commercial Cleaning Services in New York City”
+
+No CTAs
+
+No phone number
+
+No buttons
+
+Final Constraints
+
+Do not add extra CTAs
+
+Do not introduce SaaS-style UI
+
+Do not add pricing tables
+
+Do not add chat widgets
+
+Do not add popups
+
+Keep focus on one action only: form submission
+
+Intent Summary
+
+The final website should feel like a real, working commercial cleaning company in New York that:
+
+Runs on schedules
+
+Serves businesses
+
+Converts visitors quickly
+
+Respects the user’s time
