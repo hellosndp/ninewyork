@@ -5,32 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NYC Commercial Cleaning Services | Reliable & Professional</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --safety-yellow: #F4D03F;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: white;
-            color: black;
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Archivo', sans-serif;
-            text-transform: uppercase;
-        }
+        :root { --safety-yellow: #F4D03F; }
+        body { font-family: 'Inter', sans-serif; background-color: white; color: black; }
+        h1, h2, h3, h4 { font-family: 'Archivo', sans-serif; text-transform: uppercase; }
         .bg-safety-yellow { background-color: var(--safety-yellow); }
-        .hero-gradient {
-            background: linear-gradient(rgba(244, 208, 63, 0.9), rgba(244, 208, 63, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000');
-            background-size: cover;
-            background-position: center;
-        }
+        .shadow-bold { shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]; }
+        .shadow-small { shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]; }
+        
+        /* Carousel Styling */
+        .carousel-container { overflow: hidden; position: relative; }
+        .carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
+        .carousel-item { min-width: 100%; box-sizing: border-box; }
+        @media (min-width: 768px) { .carousel-item { min-width: 50%; } }
+        @media (min-width: 1024px) { .carousel-item { min-width: 33.333%; } }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- HERO SECTION -->
-    <section class="relative bg-safety-yellow pt-12 pb-20 border-b-4 border-black overflow-hidden hero-gradient">
+    <section class="relative bg-safety-yellow pt-12 pb-20 border-b-4 border-black overflow-hidden">
         <div class="container mx-auto px-6 relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
@@ -41,30 +37,30 @@
                         Reliable, routine cleaning for offices, buildings, and commercial spaces across NYC.
                     </p>
                     <div class="hidden lg:block p-4 border-l-4 border-black bg-black/5 font-bold space-y-2">
-                        <p>✓ Fully Insured & Bonded</p>
-                        <p>✓ Trained Uniformed Staff</p>
-                        <p>✓ Consistent NYC Schedule</p>
+                        <p class="flex items-center gap-2"><i data-lucide="check-circle" class="w-5 h-5"></i> Fully Insured & Bonded</p>
+                        <p class="flex items-center gap-2"><i data-lucide="check-circle" class="w-5 h-5"></i> Trained Uniformed Staff</p>
+                        <p class="flex items-center gap-2"><i data-lucide="check-circle" class="w-5 h-5"></i> Consistent NYC Schedule</p>
                     </div>
                 </div>
 
                 <div class="bg-white p-8 border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                    <h3 class="text-2xl font-bold mb-6 text-center">Get A Commercial Quote</h3>
+                    <h3 class="text-2xl font-bold mb-6">Get A Commercial Quote</h3>
                     <form class="space-y-4">
                         <div class="grid md:grid-cols-2 gap-4">
-                            <input type="text" placeholder="Business Name" class="w-full p-3 border border-black rounded-none bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black">
-                            <input type="text" placeholder="Contact Name" class="w-full p-3 border border-black rounded-none bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black">
+                            <input type="text" placeholder="Business Name" class="w-full p-3 border border-black rounded-none bg-gray-50 focus:outline-none">
+                            <input type="text" placeholder="Contact Name" class="w-full p-3 border border-black rounded-none bg-gray-50 focus:outline-none">
                         </div>
                         <div class="grid md:grid-cols-2 gap-4">
-                            <input type="email" placeholder="Email Address" class="w-full p-3 border border-black rounded-none bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black">
-                            <input type="tel" placeholder="Phone Number" class="w-full p-3 border border-black rounded-none bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black">
+                            <input type="email" placeholder="Email Address" class="w-full p-3 border border-black rounded-none bg-gray-50 focus:outline-none">
+                            <input type="tel" placeholder="Phone Number" class="w-full p-3 border border-black rounded-none bg-gray-50 focus:outline-none">
                         </div>
-                        <select class="w-full p-3 border border-black rounded-none bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black appearance-none">
+                        <select class="w-full p-3 border border-black rounded-none bg-gray-50 focus:outline-none appearance-none">
                             <option>Office Space</option>
                             <option>Retail Storefront</option>
                             <option>Entire Building</option>
                             <option>Medical Facility</option>
                         </select>
-                        <textarea placeholder="Cleaning Requirements..." rows="3" class="w-full p-3 border border-black rounded-none bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black resize-none"></textarea>
+                        <textarea placeholder="Cleaning Requirements..." rows="3" class="w-full p-3 border border-black rounded-none bg-gray-50 focus:outline-none resize-none"></textarea>
                         <button type="button" class="w-full bg-black text-white p-4 font-black uppercase tracking-widest hover:bg-zinc-800 transition-colors">
                             Request Service Proposal
                         </button>
@@ -72,80 +68,133 @@
                 </div>
             </div>
         </div>
+        <!-- Background Image Subtly Mixed -->
+        <div class="absolute top-0 right-0 w-full lg:w-1/2 h-full opacity-10 pointer-events-none z-0">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover grayscale">
+        </div>
     </section>
 
     <!-- TRUST SECTION -->
     <section class="py-16 bg-safety-yellow border-b-4 border-black">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="border-l-4 border-black p-4">
+                <div class="border-l-4 border-black p-6 bg-white/10">
+                    <i data-lucide="map-pin" class="w-10 h-10 mb-4"></i>
                     <h4 class="font-black text-xl mb-2">NYC Coverage</h4>
-                    <p class="text-sm font-medium">Serving all five boroughs with local expert teams.</p>
+                    <p class="font-medium">Serving Manhattan, Brooklyn, Queens, and the Bronx.</p>
                 </div>
-                <div class="border-l-4 border-black p-4">
+                <div class="border-l-4 border-black p-6 bg-white/10">
+                    <i data-lucide="shield-check" class="w-10 h-10 mb-4"></i>
                     <h4 class="font-black text-xl mb-2">Insured & Bonded</h4>
-                    <p class="text-sm font-medium">Full liability coverage for your peace of mind.</p>
+                    <p class="font-medium">Full liability coverage for your peace of mind.</p>
                 </div>
-                <div class="border-l-4 border-black p-4">
+                <div class="border-l-4 border-black p-6 bg-white/10">
+                    <i data-lucide="calendar-check" class="w-10 h-10 mb-4"></i>
                     <h4 class="font-black text-xl mb-2">Reliable Schedule</h4>
-                    <p class="text-sm font-medium">Consistent service you can actually plan around.</p>
+                    <p class="font-medium">We show up on time, every time. No exceptions.</p>
                 </div>
-                <div class="border-l-4 border-black p-4">
+                <div class="border-l-4 border-black p-6 bg-white/10">
+                    <i data-lucide="users" class="w-10 h-10 mb-4"></i>
                     <h4 class="font-black text-xl mb-2">Vetted Staff</h4>
-                    <p class="text-sm font-medium">Background-checked, trained, and professional.</p>
+                    <p class="font-medium">Professional, uniformed, and background-checked.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES GRID WITH IMAGES -->
+    <!-- SERVICES SECTION -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-black mb-12">Our Specialized Services</h2>
+            <div class="mb-12">
+                <h2 class="text-5xl font-black mb-4">Our Services</h2>
+                <div class="w-24 h-2 bg-safety-yellow"></div>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Office Cleaning -->
-                <div class="border-2 border-black overflow-hidden shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group">
-                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800" alt="Office Cleaning" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                <div class="border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                     <div class="p-6">
-                        <h4 class="font-bold text-xl mb-3">Office Cleaning</h4>
-                        <p class="text-zinc-600 font-medium">Routine janitorial services for corporate spaces, ensuring a pristine environment daily.</p>
+                        <h4 class="font-bold text-xl mb-2">Office Cleaning</h4>
+                        <p class="text-zinc-600 font-medium">Daily janitorial services tailored for corporate efficiency.</p>
                     </div>
                 </div>
-                <!-- Floor Care -->
-                <div class="border-2 border-black overflow-hidden shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group">
-                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6958?auto=format&fit=crop&q=80&w=800" alt="Floor Care" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                <div class="border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6958?auto=format&fit=crop&q=80&w=800" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                     <div class="p-6">
-                        <h4 class="font-bold text-xl mb-3">Floor & Carpet Care</h4>
-                        <p class="text-zinc-600 font-medium">Expert buffing, waxing, and deep carpet cleaning for high-traffic commercial zones.</p>
+                        <h4 class="font-bold text-xl mb-2">Floor & Carpet</h4>
+                        <p class="text-zinc-600 font-medium">Professional buffing, waxing, and deep extraction cleaning.</p>
                     </div>
                 </div>
-                <!-- Sanitization -->
-                <div class="border-2 border-black overflow-hidden shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group">
-                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800" alt="Sanitization" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                <div class="border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                     <div class="p-6">
-                        <h4 class="font-bold text-xl mb-3">Deep Sanitization</h4>
-                        <p class="text-zinc-600 font-medium">Focused hygiene maintenance for restrooms, kitchens, and shared touchpoints.</p>
+                        <h4 class="font-bold text-xl mb-2">Sanitization</h4>
+                        <p class="text-zinc-600 font-medium">Focused hygiene maintenance for high-traffic facilities.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPERATIONS GALLERY (CAROUSEL) -->
+    <section class="py-20 bg-zinc-100 border-y-2 border-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-black mb-10">Operations Gallery</h2>
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-item p-2">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" class="border-2 border-black grayscale w-full h-64 object-cover">
+                    </div>
+                    <div class="carousel-item p-2">
+                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=800" class="border-2 border-black grayscale w-full h-64 object-cover">
+                    </div>
+                    <div class="carousel-item p-2">
+                        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800" class="border-2 border-black grayscale w-full h-64 object-cover">
+                    </div>
+                    <div class="carousel-item p-2">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800" class="border-2 border-black grayscale w-full h-64 object-cover">
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-end gap-4 mt-8">
+                <button onclick="moveCarousel(-1)" class="border-2 border-black bg-white p-3 hover:bg-safety-yellow transition-colors"><i data-lucide="chevron-left"></i></button>
+                <button onclick="moveCarousel(1)" class="border-2 border-black bg-white p-3 hover:bg-safety-yellow transition-colors"><i data-lucide="chevron-right"></i></button>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="bg-black text-white py-12 border-t-8 border-safety-yellow">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div>
-                    <h4 class="text-2xl font-black text-safety-yellow">NYC Commercial Cleaning</h4>
-                    <p class="text-zinc-500 font-medium">Professional Janitorial Services Across New York City</p>
-                </div>
-                <div class="text-sm font-bold text-zinc-500 text-center md:text-right">
-                    <p>© 2025 Commercial Cleaning NYC</p>
-                    <p>Operating Manhattan • Brooklyn • Queens • Bronx</p>
-                </div>
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <h4 class="text-2xl font-black text-safety-yellow">NYC Commercial Cleaning</h4>
+                <p class="text-zinc-500 font-medium">Professional Janitorial Services Across NYC</p>
+            </div>
+            <div class="text-zinc-500 font-bold text-center md:text-right">
+                <p>© 2025 Commercial Cleaning NYC</p>
+                <p>Reliable • Consistent • Professional</p>
             </div>
         </div>
     </footer>
 
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Carousel Logic
+        let index = 0;
+        function moveCarousel(dir) {
+            const track = document.getElementById('carouselTrack');
+            const items = document.querySelectorAll('.carousel-item');
+            const total = items.length;
+            const visible = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+            
+            index = (index + dir + total) % (total - visible + 1);
+            const amount = (100 / visible) * index;
+            track.style.transform = `translateX(-${amount}%)`;
+        }
+
+        // Auto-scroll
+        setInterval(() => moveCarousel(1), 5000);
+    </script>
 </body>
 </html>
