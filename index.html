@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NYC Commercial Cleaning Services</title>
+    <title>NYC Commercial Cleaning Services | Reliable & Professional</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -20,12 +20,17 @@
             text-transform: uppercase;
         }
         .bg-safety-yellow { background-color: var(--safety-yellow); }
+        .hero-gradient {
+            background: linear-gradient(rgba(244, 208, 63, 0.9), rgba(244, 208, 63, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- HERO SECTION -->
-    <section class="relative bg-safety-yellow pt-12 pb-20 border-b-4 border-black overflow-hidden">
+    <section class="relative bg-safety-yellow pt-12 pb-20 border-b-4 border-black overflow-hidden hero-gradient">
         <div class="container mx-auto px-6 relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
@@ -43,7 +48,7 @@
                 </div>
 
                 <div class="bg-white p-8 border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                    <h3 class="text-2xl font-bold mb-6">Get A Commercial Quote</h3>
+                    <h3 class="text-2xl font-bold mb-6 text-center">Get A Commercial Quote</h3>
                     <form class="space-y-4">
                         <div class="grid md:grid-cols-2 gap-4">
                             <input type="text" placeholder="Business Name" class="w-full p-3 border border-black rounded-none bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black">
@@ -53,7 +58,7 @@
                             <input type="email" placeholder="Email Address" class="w-full p-3 border border-black rounded-none bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black">
                             <input type="tel" placeholder="Phone Number" class="w-full p-3 border border-black rounded-none bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black">
                         </div>
-                        <select class="w-full p-3 border border-black rounded-none bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black">
+                        <select class="w-full p-3 border border-black rounded-none bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black appearance-none">
                             <option>Office Space</option>
                             <option>Retail Storefront</option>
                             <option>Entire Building</option>
@@ -93,34 +98,34 @@
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
+    <!-- SERVICES GRID WITH IMAGES -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-black mb-12">Our Services</h2>
+            <h2 class="text-5xl font-black mb-12">Our Specialized Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="border-2 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <h4 class="font-bold text-xl mb-3">Office Cleaning</h4>
-                    <p class="text-zinc-600 font-medium leading-relaxed">Daily janitorial services for corporate spaces of any scale.</p>
+                <!-- Office Cleaning -->
+                <div class="border-2 border-black overflow-hidden shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group">
+                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800" alt="Office Cleaning" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl mb-3">Office Cleaning</h4>
+                        <p class="text-zinc-600 font-medium">Routine janitorial services for corporate spaces, ensuring a pristine environment daily.</p>
+                    </div>
                 </div>
-                <div class="border-2 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <h4 class="font-bold text-xl mb-3">Floor & Carpet Care</h4>
-                    <p class="text-zinc-600 font-medium leading-relaxed">Professional waxing, buffing, and high-traffic carpet steam cleaning.</p>
+                <!-- Floor Care -->
+                <div class="border-2 border-black overflow-hidden shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6958?auto=format&fit=crop&q=80&w=800" alt="Floor Care" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl mb-3">Floor & Carpet Care</h4>
+                        <p class="text-zinc-600 font-medium">Expert buffing, waxing, and deep carpet cleaning for high-traffic commercial zones.</p>
+                    </div>
                 </div>
-                <div class="border-2 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <h4 class="font-bold text-xl mb-3">Sanitization</h4>
-                    <p class="text-zinc-600 font-medium leading-relaxed">Deep cleaning of restrooms and kitchens to maintain hygiene standards.</p>
-                </div>
-                <div class="border-2 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <h4 class="font-bold text-xl mb-3">Building Maintenance</h4>
-                    <p class="text-zinc-600 font-medium leading-relaxed">Lobby and common area upkeep for residential and commercial buildings.</p>
-                </div>
-                <div class="border-2 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <h4 class="font-bold text-xl mb-3">Day Porters</h4>
-                    <p class="text-zinc-600 font-medium leading-relaxed">Ongoing facility support during business hours to keep things pristine.</p>
-                </div>
-                <div class="border-2 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <h4 class="font-bold text-xl mb-3">Post-Construction</h4>
-                    <p class="text-zinc-600 font-medium leading-relaxed">Specialized deep cleaning for new builds and renovation projects.</p>
+                <!-- Sanitization -->
+                <div class="border-2 border-black overflow-hidden shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800" alt="Sanitization" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl mb-3">Deep Sanitization</h4>
+                        <p class="text-zinc-600 font-medium">Focused hygiene maintenance for restrooms, kitchens, and shared touchpoints.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -132,11 +137,11 @@
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div>
                     <h4 class="text-2xl font-black text-safety-yellow">NYC Commercial Cleaning</h4>
-                    <p class="text-zinc-500 font-medium">Professional Janitorial Services</p>
+                    <p class="text-zinc-500 font-medium">Professional Janitorial Services Across New York City</p>
                 </div>
                 <div class="text-sm font-bold text-zinc-500 text-center md:text-right">
                     <p>© 2025 Commercial Cleaning NYC</p>
-                    <p>Serving New York City Businesses</p>
+                    <p>Operating Manhattan • Brooklyn • Queens • Bronx</p>
                 </div>
             </div>
         </div>
