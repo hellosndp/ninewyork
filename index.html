@@ -1,147 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NYC Commercial Cleaning Services | Professional & Reliable</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Commercial Cleaning Services | Professional & Reliable</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-  <style>
-    :root { --safety-yellow: #F4D03F; }
-    body { font-family: 'Inter', sans-serif; background: white; color: black; }
-    h1,h2,h3,h4 { font-family: 'Archivo', sans-serif; text-transform: uppercase; }
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 
-    .bg-safety-yellow { background-color: var(--safety-yellow); }
-    .brutal-shadow { box-shadow: 8px 8px 0 black; }
-    .brutal-shadow-sm { box-shadow: 4px 4px 0 black; }
-    input, select, textarea { border-radius: 0 !important; }
+    <style>
+        :root { --safety-yellow: #F4D03F; }
+        body { font-family: 'Inter', sans-serif; background-color: white; color: black; }
+        h1, h2, h3, h4 { font-family: 'Archivo', sans-serif; text-transform: uppercase; }
+        .bg-safety-yellow { background-color: var(--safety-yellow); }
 
-    .carousel-container { overflow: hidden; }
-    .carousel-track { display: flex; transition: transform 0.4s ease; }
-    .carousel-item { min-width: 100%; }
-    @media (min-width:768px){ .carousel-item{min-width:50%;}}
-    @media (min-width:1024px){ .carousel-item{min-width:33.333%;}}
-  </style>
+        .carousel-container { overflow: hidden; position: relative; }
+        .carousel-track { display: flex; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .carousel-item { min-width: 100%; box-sizing: border-box; }
+        @media (min-width: 768px) { .carousel-item { min-width: 50%; } }
+        @media (min-width: 1024px) { .carousel-item { min-width: 33.333%; } }
+
+        .brutal-shadow { box-shadow: 8px 8px 0px 0px rgba(0,0,0,1); }
+        .brutal-shadow-sm { box-shadow: 4px 4px 0px 0px rgba(0,0,0,1); }
+        input, select, textarea { border-radius: 0 !important; }
+    </style>
 </head>
 
 <body class="antialiased">
 
 <!-- HERO -->
-<section class="relative bg-safety-yellow pt-12 pb-20 border-b-4 border-black">
-  <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+<section class="relative bg-safety-yellow pt-12 pb-20 border-b-4 border-black overflow-hidden">
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
 
-    <div>
-      <h1 class="text-6xl lg:text-8xl font-black leading-[0.9]">
-        Commercial Cleaning for <span class="block">New York Businesses</span>
-      </h1>
-      <p class="text-xl lg:text-2xl mt-4">
-        Reliable, routine cleaning for offices and commercial spaces.
-      </p>
-    </div>
+            <div class="space-y-6">
+                <h1 class="text-6xl lg:text-8xl font-black leading-[0.9] tracking-tighter">
+                    Commercial Cleaning for <span class="block">New York Businesses</span>
+                </h1>
+                <p class="text-xl lg:text-2xl font-medium max-w-lg opacity-90">
+                    Reliable, routine cleaning for offices, buildings, and commercial spaces across NYC.
+                </p>
+            </div>
 
-    <!-- FORM -->
-    <div class="bg-white p-8 border-2 border-black brutal-shadow">
-      <h3 class="text-3xl font-black mb-6 text-center">Get A Call</h3>
+            <div class="bg-white p-8 border-2 border-black brutal-shadow">
+                <h3 class="text-3xl font-black mb-6 text-center">Get A Call</h3>
 
-      <form onsubmit="submitLead(event)" class="space-y-4">
-        <div class="grid md:grid-cols-2 gap-4">
-          <input name="contact_name" placeholder="Contact Name" required class="p-3 border-2 border-black bg-gray-50">
-          <input name="business_name" placeholder="Business Name" required class="p-3 border-2 border-black bg-gray-50">
+                <form id="leadForm" class="space-y-4">
+
+                    <input type="hidden" name="city" value="Syracuse">
+
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-xs font-black uppercase">Contact Name</label>
+                            <input name="contact_name" required class="w-full p-3 border-2 border-black bg-gray-50">
+                        </div>
+                        <div>
+                            <label class="text-xs font-black uppercase">Business Name</label>
+                            <input name="business_name" required class="w-full p-3 border-2 border-black bg-gray-50">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-xs font-black uppercase">Email ID</label>
+                            <input type="email" name="email" required class="w-full p-3 border-2 border-black bg-gray-50">
+                        </div>
+                        <div>
+                            <label class="text-xs font-black uppercase">Phone Number</label>
+                            <input name="phone" required class="w-full p-3 border-2 border-black bg-gray-50">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="text-xs font-black uppercase">Type of Space</label>
+                        <select name="space_type" class="w-full p-3 border-2 border-black bg-gray-50 font-bold">
+                            <option>Office</option>
+                            <option>Retail</option>
+                            <option>Medical Facility</option>
+                            <option>Warehouse / Industrial</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="text-xs font-black uppercase">Service Needed In</label>
+                        <select name="timeline" class="w-full p-3 border-2 border-black bg-gray-50 font-bold">
+                            <option>Immediately</option>
+                            <option>Within 7 days</option>
+                            <option>Within 15 days</option>
+                            <option>Just exploring</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="text-xs font-black uppercase">Instructions / Message</label>
+                        <textarea name="message" rows="2" class="w-full p-3 border-2 border-black bg-gray-50 resize-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-black text-white p-5 font-black uppercase tracking-widest text-xl">
+                        Request a Call
+                    </button>
+                </form>
+            </div>
         </div>
-
-        <div class="grid md:grid-cols-2 gap-4">
-          <input type="email" name="email" placeholder="Email" required class="p-3 border-2 border-black bg-gray-50">
-          <input name="phone" placeholder="Phone" required class="p-3 border-2 border-black bg-gray-50">
-        </div>
-
-        <select name="city" class="w-full p-3 border-2 border-black bg-gray-50 font-bold">
-          <option value="Syracuse">Syracuse, New York</option>
-        </select>
-
-        <select name="space_type" class="w-full p-3 border-2 border-black bg-gray-50 font-bold">
-          <option>Office</option>
-          <option>Retail</option>
-          <option>Medical Facility</option>
-          <option>Warehouse / Industrial</option>
-        </select>
-
-        <select name="timeline" class="w-full p-3 border-2 border-black bg-gray-50 font-bold">
-          <option>Immediately</option>
-          <option>Within 7 days</option>
-          <option>Within 15 days</option>
-        </select>
-
-        <textarea name="message" rows="2" placeholder="Message"
-          class="w-full p-3 border-2 border-black bg-gray-50 resize-none"></textarea>
-
-        <button class="w-full bg-black text-white p-5 font-black uppercase tracking-widest text-xl">
-          Request a Call
-        </button>
-      </form>
     </div>
-  </div>
-
-  <div class="absolute inset-y-0 right-0 w-1/2 opacity-10">
-    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1500"
-      class="w-full h-full object-cover grayscale">
-  </div>
 </section>
 
-<!-- SERVICES -->
-<section class="py-20">
-  <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
-    <img class="border-2 border-black brutal-shadow-sm grayscale"
-      src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800">
-    <img class="border-2 border-black brutal-shadow-sm grayscale"
-      src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800">
-    <img class="border-2 border-black brutal-shadow-sm grayscale"
-      src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800">
-  </div>
-</section>
-
-<!-- OPERATIONS GALLERY -->
-<section class="py-20 bg-zinc-100 border-y-4 border-black">
-  <div class="container mx-auto px-6">
-
-    <div class="carousel-container">
-      <div class="carousel-track" id="carouselTrack">
-        <div class="carousel-item p-3">
-          <img class="border-2 border-black brutal-shadow-sm grayscale"
-            src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800">
-        </div>
-        <div class="carousel-item p-3">
-          <img class="border-2 border-black brutal-shadow-sm grayscale"
-            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800">
-        </div>
-        <div class="carousel-item p-3">
-          <img class="border-2 border-black brutal-shadow-sm grayscale"
-            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800">
-        </div>
-      </div>
+<!-- FOOTER (unchanged) -->
+<footer class="bg-black text-white py-16 border-t-[12px] border-[#FFD400]">
+    <div class="container mx-auto px-6 text-center">
+        <h4 class="text-4xl font-black text-[#FFD400]">NEARBY IN NEW YORK</h4>
+        <p class="opacity-60 mt-2">© 2025 • All Rights Reserved</p>
     </div>
-
-    <!-- CONTROLS -->
-    <div class="flex justify-between mt-6">
-      <button id="prevBtn" class="bg-black text-white px-6 py-3 font-black uppercase brutal-shadow-sm">
-        ← Back
-      </button>
-      <button id="nextBtn" class="bg-black text-white px-6 py-3 font-black uppercase brutal-shadow-sm">
-        Next →
-      </button>
-    </div>
-
-  </div>
-</section>
-
-<footer class="bg-black text-white py-16 border-t-[12px] border-[#FFD400] text-center">
-  <h4 class="text-4xl font-black text-[#FFD400]">NEARBY IN NEW YORK</h4>
-  <p class="opacity-60 mt-2">© 2025 • All Rights Reserved</p>
 </footer>
 
-<!-- SUPABASE -->
+<!-- Supabase -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
   const supabaseClient = supabase.createClient(
@@ -149,8 +129,9 @@
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdlbmhhanViZXRhZm1ncmlkdG11Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE3MjU1OTAsImV4cCI6MjA3NzMwMTU5MH0.bjecKYswHToxjmL1sqM89vbTyyTDcHn6uVA7QTtXuB8"
   );
 
-  async function submitLead(e){
+  document.getElementById("leadForm").addEventListener("submit", async (e) => {
     e.preventDefault();
+
     const f = e.target;
 
     const { error } = await supabaseClient.from("nearby_leads").insert([{
@@ -158,39 +139,22 @@
       business_name: f.business_name.value,
       email: f.email.value,
       phone: f.phone.value,
-      city: f.city.value,
+      city: "Syracuse",
       space_type: f.space_type.value,
       service_needed_in: f.timeline.value,
       message: f.message.value
     }]);
 
-    if(!error) location.href="/success.html";
-    else alert("Something went wrong");
-  }
+    if (!error) {
+      window.location.href = "/success.html";
+    } else {
+      alert("Something went wrong. Please try again.");
+      console.error(error);
+    }
+  });
+
+  lucide.createIcons();
 </script>
-
-<!-- CAROUSEL JS -->
-<script>
-  const track = document.getElementById("carouselTrack");
-  const nextBtn = document.getElementById("nextBtn");
-  const prevBtn = document.getElementById("prevBtn");
-  let index = 0;
-
-  function updateCarousel(){
-    const width = track.children[0].offsetWidth;
-    track.style.transform = `translateX(-${index * width}px)`;
-  }
-
-  nextBtn.onclick = () => {
-    if(index < track.children.length - 1){ index++; updateCarousel(); }
-  };
-  prevBtn.onclick = () => {
-    if(index > 0){ index--; updateCarousel(); }
-  };
-  window.onresize = updateCarousel;
-</script>
-
-<script>lucide.createIcons();</script>
 
 </body>
 </html>
