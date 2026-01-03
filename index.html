@@ -40,14 +40,8 @@
             <div class="bg-white p-8 border-2 border-black brutal-shadow">
                 <h3 class="text-3xl font-black mb-6 text-center">Get A Call</h3>
 
-                <form
-                    method="POST"
-                    action="https://script.google.com/macros/s/AKfycbyaOleLddjZRlysxcJJYGcCknilEpqMRz0t1TpgKswdcOutJAUBKWdHoqTglDuUtTXI/exec"
-                    class="space-y-4"
-                >
-
-                    <!-- City (locked) -->
-                    <input type="hidden" name="city" value="Syracuse">
+                <!-- 🔽 ONLY CHANGE: form now uses Supabase -->
+                <form onsubmit="submitLead(event)" class="space-y-4">
 
                     <div class="grid md:grid-cols-2 gap-4">
                         <div>
@@ -74,16 +68,14 @@
                     </div>
 
                     <div>
-                          <label class="text-xs font-black uppercase">City</label>
-                          <select
+                        <label class="text-xs font-black uppercase">City</label>
+                        <select
                             name="city"
                             required
                             class="w-full p-3 border-2 border-black bg-gray-50 focus:bg-white focus:outline-none font-bold">
                             <option value="Syracuse">Syracuse, New York</option>
-                            <!-- Future cities go here -->
-                          </select>
-                        </div>
-
+                        </select>
+                    </div>
 
                     <div>
                         <label class="text-xs font-black uppercase">Type of Space</label>
@@ -137,6 +129,41 @@
 
 <script>
     lucide.createIcons();
+</script>
+
+<!-- 🔽 Supabase (ONLY NEW SCRIPT) -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+    const supabase = supabase.createClient(
+        "https://genhajubetafmgridtmu.supabase.co",
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdlbmhhanViZXRhZm1ncmlkdG11Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE3MjU1OTAsImV4cCI6MjA3NzMwMTU5MH0.bjecKYswHToxjmL1sqM89vbTyyTDcHn6uVA7QTtXuB8"
+    );
+
+    async function submitLead(event) {
+        event.preventDefault();
+
+        const form = event.target;
+
+        const { error } = await supabase
+            .from("nearby_leads")
+            .insert([{
+                contact_name: form.contact_name.value,
+                business_name: form.business_name.value,
+                email: form.email.value,
+                phone: form.phone.value,
+                city: form.city.value,
+                space_type: form.space_type.value,
+                service_needed_in: form.timeline.value,
+                message: form.message.value
+            }]);
+
+        if (!error) {
+            window.location.href = "/success.html";
+        } else {
+            console.error(error);
+            alert("Something went wrong. Please try again.");
+        }
+    }
 </script>
 
 </body>
