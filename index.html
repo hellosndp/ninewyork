@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NYC Commercial Cleaning Services | Professional & Reliable</title>
 
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
@@ -14,16 +20,24 @@
         body { font-family: 'Inter', sans-serif; background-color: white; color: black; }
         h1, h2, h3, h4 { font-family: 'Archivo', sans-serif; text-transform: uppercase; }
         .bg-safety-yellow { background-color: var(--safety-yellow); }
-        input, select, textarea { border-radius: 0 !important; }
+
+        .carousel-container { overflow: hidden; position: relative; }
+        .carousel-track { display: flex; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .carousel-item { min-width: 100%; }
+        @media (min-width: 768px) { .carousel-item { min-width: 50%; } }
+        @media (min-width: 1024px) { .carousel-item { min-width: 33.333%; } }
+
         .brutal-shadow { box-shadow: 8px 8px 0px 0px rgba(0,0,0,1); }
         .brutal-shadow-sm { box-shadow: 4px 4px 0px 0px rgba(0,0,0,1); }
+        input, select, textarea { border-radius: 0 !important; }
     </style>
 </head>
 
 <body class="antialiased">
 
-<section class="relative bg-safety-yellow pt-12 pb-20 border-b-4 border-black">
-    <div class="container mx-auto px-6">
+<!-- HERO -->
+<section class="relative bg-safety-yellow pt-12 pb-20 border-b-4 border-black overflow-hidden">
+    <div class="container mx-auto px-6 relative z-10">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
 
             <div>
@@ -35,6 +49,7 @@
                 </p>
             </div>
 
+            <!-- FORM (UNCHANGED SUPABASE FLOW) -->
             <div class="bg-white p-8 border-2 border-black brutal-shadow">
                 <h3 class="text-3xl font-black mb-6 text-center">Get A Call</h3>
 
@@ -103,6 +118,57 @@
 
         </div>
     </div>
+
+    <!-- HERO IMAGE -->
+    <div class="absolute top-0 right-0 w-full lg:w-1/2 h-full opacity-10 pointer-events-none">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1500"
+             class="w-full h-full object-cover grayscale">
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="border-2 border-black brutal-shadow-sm overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800"
+                     class="w-full h-56 object-cover grayscale">
+                <div class="p-8">
+                    <h4 class="font-black text-2xl mb-3">Office Cleaning</h4>
+                    <p class="text-zinc-600 font-medium">Daily maintenance for corporate spaces.</p>
+                </div>
+            </div>
+            <div class="border-2 border-black brutal-shadow-sm overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800"
+                     class="w-full h-56 object-cover grayscale">
+                <div class="p-8">
+                    <h4 class="font-black text-2xl mb-3">Floor & Carpet</h4>
+                    <p class="text-zinc-600 font-medium">Industrial-grade deep cleaning.</p>
+                </div>
+            </div>
+            <div class="border-2 border-black brutal-shadow-sm overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800"
+                     class="w-full h-56 object-cover grayscale">
+                <div class="p-8">
+                    <h4 class="font-black text-2xl mb-3">Sanitization</h4>
+                    <p class="text-zinc-600 font-medium">Medical-grade hygiene services.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- OPERATIONS GALLERY -->
+<section class="py-20 bg-zinc-100 border-y-4 border-black">
+    <div class="container mx-auto px-6">
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-item p-3"><img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800" class="w-full h-80 object-cover grayscale border-2 border-black brutal-shadow-sm"></div>
+                <div class="carousel-item p-3"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=800" class="w-full h-80 object-cover grayscale border-2 border-black brutal-shadow-sm"></div>
+                <div class="carousel-item p-3"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800" class="w-full h-80 object-cover grayscale border-2 border-black brutal-shadow-sm"></div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <footer class="bg-black text-white py-16 border-t-[12px] border-[#FFD400]">
@@ -111,10 +177,6 @@
         <p class="opacity-60 mt-2">© 2025 • All Rights Reserved</p>
     </div>
 </footer>
-
-<script>
-    lucide.createIcons();
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
@@ -125,29 +187,24 @@
 
     async function submitLead(event) {
         event.preventDefault();
+        const f = event.target;
 
-        const form = event.target;
+        const { error } = await supabaseClient.from("nearby_leads").insert([{
+            contact_name: f.contact_name.value,
+            business_name: f.business_name.value,
+            email: f.email.value,
+            phone: f.phone.value,
+            city: f.city.value,
+            space_type: f.space_type.value,
+            service_needed_in: f.timeline.value,
+            message: f.message.value
+        }]);
 
-        const { error } = await supabaseClient
-            .from("nearby_leads")
-            .insert([{
-                contact_name: form.contact_name.value,
-                business_name: form.business_name.value,
-                email: form.email.value,
-                phone: form.phone.value,
-                city: form.city.value,
-                space_type: form.space_type.value,
-                service_needed_in: form.timeline.value,
-                message: form.message.value
-            }]);
-
-        if (!error) {
-            window.location.href = "/success.html";
-        } else {
-            console.error(error);
-            alert("Something went wrong. Please try again.");
-        }
+        if (!error) window.location.href = "/success.html";
+        else alert("Something went wrong.");
     }
+
+    lucide.createIcons();
 </script>
 
 </body>
