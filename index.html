@@ -54,10 +54,24 @@
                 <div class="bg-white p-8 border-2 border-black brutal-shadow">
                     <h3 class="text-3xl font-black mb-6 text-center">Get A Call</h3>
                 
-                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('Request Received! We will contact you shortly.');">
+                    <form id="leadForm" class="space-y-4">
                 
                         <!-- City (default: Syracuse) -->
-                        <input type="hidden" name="city" value="Syracuse">
+                        <div>
+                            <!-- <label class="text-xs font-black uppercase">City</label>
+                            <select
+                              name="city"
+                              required
+                              class="w-full p-3 border-2 border-black bg-gray-50 font-bold"
+                            >
+                              <option value="" disabled selected>Select City</option>
+                              <option value="Syracuse">Syracuse, New York</option> -->
+                              <!-- Add more later -->
+                              <!-- <option value="Albany">Albany, New York</option> -->
+                              <!-- <option value="Buffalo">Buffalo, New York</option> -->
+                            </select>
+                          </div>
+                          
                 
                         <div class="grid md:grid-cols-2 gap-4">
                             <div class="space-y-1">
@@ -100,11 +114,14 @@
                         </div>
                         <div class="space-y-1">
                             <label class="text-xs font-black uppercase">City</label>
-                            <select name="space_type"
-                                class="w-full p-3 border-2 border-black bg-gray-50 focus:bg-white focus:outline-none font-bold">
-                                <option>Syracuse, New York</option>
+                            <select
+                              name="city"
+                              class="w-full p-3 border-2 border-black bg-gray-50
+                                     focus:bg-white focus:outline-none font-bold">
+                              <option value="Syracuse">Syracuse, New York</option>
                             </select>
-                        </div>
+                          </div>
+                          
                         
 
                         <div class="space-y-1">
@@ -211,32 +228,32 @@
                     <h2 class="text-5xl font-black mb-4 tracking-tighter">Operations Gallery</h2>
                     <div class="w-24 h-2 bg-safety-yellow"></div>
                 </div>
-                <p class="hidden md:block font-black text-zinc-400 uppercase tracking-widest">Previous Projects</p>
+                <p class="hidden md:block font-black text-zinc-400 uppercase tracking-widest">Real NYC Projects</p>
             </div>
             
             <div class="carousel-container mb-8">
                 <div class="carousel-track" id="carouselTrack">
-                    <div class="carousel-item p-3">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" class="border-2 border-black brutal-shadow-sm grayscale w-full h-80 object-cover">
+                    <div class="carousel-item p-3 group">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" class="borderborder-2 border-black brutal-shadow-sm grayscale group-hover:grayscale-0 transition-all duration-700 w-full h-80 object-cover">
                     </div>
-                    <div class="carousel-item p-3">
-                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=800" class="border-2 border-black brutal-shadow-sm grayscale w-full h-80 object-cover">
+                    <div class="carousel-item p-3 group">
+                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=800" class="borderborder-2 border-black brutal-shadow-sm grayscale group-hover:grayscale-0 transition-all duration-700 w-full h-80 object-cover">
                     </div>
-                    <div class="carousel-item p-3">
-                        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800" class="border-2 border-black brutal-shadow-sm grayscale w-full h-80 object-cover">
+                    <div class="carousel-item p-3 group">
+                        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800" class="borderborder-2 border-black brutal-shadow-sm grayscale group-hover:grayscale-0 transition-all duration-700 w-full h-80 object-cover">
                     </div>
-                    <div class="carousel-item p-3">
-                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800" class="border-2 border-black brutal-shadow-sm grayscale w-full h-80 object-cover">
+                    <div class="carousel-item p-3 group">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800" class="borderborder-2 border-black brutal-shadow-sm grayscale group-hover:grayscale-0 transition-all duration-700 w-full h-80 object-cover">
                     </div>
-                    <div class="carousel-item p-3">
-                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800" class="border-2 border-black brutal-shadow-sm grayscale w-full h-80 object-cover">
+                    <div class="carousel-item p-3 group">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800" class="borderborder-2 border-black brutal-shadow-sm grayscale group-hover:grayscale-0 transition-all duration-700 w-full h-80 object-cover">
                     </div>
                 </div>
             </div>
             
             <div class="flex justify-end gap-4">
-                <button onclick="moveCarousel(-1)" class="border-2 border-black bg-white p-4 hover:bg-[#FFD400] active:translate-y-1 transition-all"><i data-lucide="arrow-left" class="w-8 h-8"></i></button>
-                <button onclick="moveCarousel(1)" class="border-2 border-black bg-white p-4 hover:bg-[#FFD400] active:translate-y-1 transition-all"><i data-lucide="arrow-right" class="w-8 h-8"></i></button>
+                <button onclick="moveCarousel(-1)" class="border-2 border-black bg-white p-4 hover:bg-safety-yellow active:translate-y-1 transition-all"><i data-lucide="arrow-left" class="w-8 h-8"></i></button>
+                <button onclick="moveCarousel(1)" class="border-2 border-black bg-white p-4 hover:bg-safety-yellow active:translate-y-1 transition-all"><i data-lucide="arrow-right" class="w-8 h-8"></i></button>
             </div>
         </div>
     </section>
@@ -278,10 +295,14 @@
           message: f.message.value
         }]);
     
-        if (!error) window.location.href = "/success.html";
+        if (!error) {
+            window.open("/success.html", "_blank");
+        }
         else alert("Something went wrong");
       });
+      </script>
     
+    <script>
         // Initialize Lucide Icons
         lucide.createIcons();
 
